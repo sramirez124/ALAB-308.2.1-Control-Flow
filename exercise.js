@@ -74,6 +74,7 @@ let plantCount = 100;
 let loop = true;
 let weekCount = 0;
 let space = 0;
+let radiusPart2 = 0;
 
 while (loop){
     plantCount = plantCount * 2;
@@ -83,7 +84,15 @@ while (loop){
     console.log("Space taken: " + plantCount * minSpace)
     if(weekCount === 10){
         loop = false;
-    } else {
-
+        space = plantCount * minSpace;
     }
 }
+
+radiusPart2 = Math.sqrt(space / PI);
+console.log ("The radius of the expanded circular garden should be: " + radiusPart2.toFixed(1) + "m");
+
+console.log("==========Part 3==========")
+
+// try{
+
+// }
