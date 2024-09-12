@@ -7,15 +7,19 @@ const growthRate = 2;
 const maxPlantCompacity = (area / minSpace);
 
 // First Week
-
 const firstWeekPlantCount = startingPlants * growthRate;
 const firstWeekSpace = firstWeekPlantCount * minSpace;
 const firstWeekSpaceLeft = area - firstWeekSpace;
 
-//area check
-// console.log('Area is ' + area);
 
 if ((firstWeekPlantCount / maxPlantCompacity) < 0.8){
-    console.log("First wee plant count: " + firstWeekPlantCount)
-    console.log("The plant needs ot be pruned");
+    console.log("Week 1: The plants need to be pruned");
+} else if ((firstWeekPlantCount * minSpace) / area >= 0.5) {
+    console.log("Week 1: The plants does not need to be pruned")
+} else {
+    console.log("Week 1: You can plant more...plants")
 }
+
+// Second Week
+const secondWeekPlantCount = firstWeekPlantCount * growthRate;
+const secondWeekSpace = secondWeekPlantCount * minSpace;
