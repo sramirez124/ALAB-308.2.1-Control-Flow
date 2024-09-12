@@ -68,3 +68,22 @@ switch (thirdWeekSpace / area){
         console.log("You can plant more");
         console.log("Space taken: " + thirdWeekSpaceTaken * 100 + "%");
 }
+
+// Part 2: Thinking Bigger
+let plantCount = 100;
+let loop = true;
+let weekCount = 0;
+let space = 0;
+
+while (loop){
+    plantCount = plantCount * 2;
+    weekCount++;
+    console.log("===========Week " + weekCount + "==========")
+    console.log("Plant Count: " + plantCount)
+    console.log("Space taken: " + plantCount * minSpace)
+    if(weekCount === 10){
+        loop = false;
+    } else {
+
+    }
+}
