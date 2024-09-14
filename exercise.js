@@ -1,3 +1,5 @@
+// Part 1
+console.log("==================== Part 1 ====================");
 const radius = 5;
 const PI =3.1415;
 const area = PI * radius * radius;
@@ -59,6 +61,7 @@ if ((thirdWeekPlantCount / maxPlantCompacity) > 0.8){
 }
 
 // Part 2: Thinking Bigger
+console.log("==================== Part 2 ====================");
 let plantCount = 100;
 let loop = true;
 let weekCount = 0;
@@ -80,5 +83,22 @@ while (loop){
 radiusPart2 = Math.sqrt(space / PI);
 console.log ("The radius of the expanded circular garden should be: " + radiusPart2.toFixed(1) + "m");
 
-console.log("==========Part 3==========")
+// Part 3: Errors in Judgement
+// The scientists decided not to listen to your recommendations, and have instead started with 100 plants in the 
+// original 5-meter-radius garden.
+// Use try and catch to wrap your work in an error-handling block. If the amount of space required to hold the 
+// originally provided number of plants exceeds the amount of space 
+// available, throw a new error and log an appropriate message.
 
+console.log("==================== Part 3 ====================");
+
+const startPlants = 100;
+try{
+    if ((startPlants / maxPlantCompacity) < 0.8){
+        console.log("Everything somehow fit?");
+    } else {
+        throw "Scientist didn't listen and tried anyway"
+    }
+} catch (error){
+    console.log(error);
+}
